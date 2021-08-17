@@ -10,37 +10,52 @@
   <body>
     <header class="main-header">
       <div class="wrapper">
-        <h1>IP Address Tracker</h1>
-        <form action="#" id="form-ip">
-          <input type="text" placeholder="Search for any IP address or domain" required />
-          <button type="submit">
-            <img src="./images/icon-arrow.svg" alt="Icon Arrow Right" />
-          </button>
-        </form>
+        <div class="main-header-content">
+          <h1>IP Address Tracker</h1>
+          <form action="#" id="form-ip" class="main-header-form flex">
+            <input
+              type="text"
+              placeholder="Search for any IP address or domain"
+              required
+              pattern="/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+            />
+            <button type="submit">
+              <img src="./images/icon-arrow.svg" alt="Icon Arrow Right" />
+            </button>
+          </form>
+        </div>
       </div>
     </header>
     <main>
       <div class="wrapper">
-        <div class="details-tracker flex flex-d-c">
-          <div class="details tracker-feature">
+        <div class="details-tracker flex flex-fd-c flex-ai-c">
+          <div class="details-tracker-feature">
             <small>Ip Address</small>
             <p id="ip-address">192.168.174.101</p>
           </div>
-          <div class="details tracker-feature">
+          <div class="details-tracker-feature">
             <small>Location</small>
             <p id="ip-location">Broklin NY10001</p>
           </div>
-          <div class="details tracker-feature">
+          <div class="details-tracker-feature">
             <small>Timezone</small>
             <p id="ip-timezone">UTC - 05:00</p>
           </div>
-          <div class="details tracker-feature">
+          <div class="details-tracker-feature">
             <small>Isp</small>
             <p id="ip-isp">SpaceX Starlink</p>
           </div>
         </div>
       </div>
-      <div id="map-location">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3939.980539522342!2d-78.5878243!3d-9.0655369!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1629219630104!5m2!1ses-419!2spe"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+      <div id="map-location" class="none">
         <img src="./images/icon-location.svg" alt="Icon Location" />
       </div>
     </main>
