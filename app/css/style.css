@@ -168,6 +168,10 @@ main {
   box-shadow: 0 0 5px -1px var(--vdark-gray);
 }
 
+.details-tracker-feature {
+  max-width: 100%;
+}
+
 .details-tracker-feature > small {
   display: block;
   text-transform: uppercase;
@@ -182,6 +186,7 @@ main {
   font-weight: bold;
   color: var(--vdark-gray);
   font-size: 1.1em;
+  word-wrap: break-word;
 }
 
 main > iframe {
