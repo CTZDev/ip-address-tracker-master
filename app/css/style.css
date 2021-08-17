@@ -1,3 +1,6 @@
+/*IMPORT FONT*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
 /*CUSTOM PROPERTIES*/
 :root {
   --fz-md: 16px;
@@ -54,9 +57,6 @@ picture {
   max-width: 100%;
   display: block;
 }
-
-/*IMPORT FONT*/
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 /* REMOVE ALL ANIMATIONS, TRANSITIONS AND SMOOTH SCROLL FOR PEOPLE THAT PREFER NOT TO SEE THEM */
 @media (prefers-reduced-motion: reduce) {
@@ -120,13 +120,16 @@ picture {
   padding-top: 1.875rem;
   padding-bottom: 1.5rem;
   text-align: center;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-header-content > h1 {
   font-size: 1.4em;
   margin-bottom: 1.75rem;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .main-header-form > * {
@@ -150,6 +153,8 @@ picture {
   outline: none;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  display: grid;
+  place-items: center;
   cursor: pointer;
 }
 
@@ -166,6 +171,9 @@ main {
   text-align: center;
   gap: 1.25rem;
   box-shadow: 0 0 5px -1px var(--vdark-gray);
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .details-tracker-feature {
@@ -185,8 +193,8 @@ main {
 .details-tracker-feature > p {
   font-weight: bold;
   color: var(--vdark-gray);
-  font-size: 1.1em;
-  word-wrap: break-word;
+  font-size: 1.15em;
+  font-weight: 500;
 }
 
 main > iframe {
@@ -196,4 +204,25 @@ main > iframe {
   width: 100%;
   height: 85vh;
   z-index: -1;
+}
+
+/*MEDIA QUERIES*/
+@media only screen and (min-width: 1024px) {
+  .main-header {
+    height: 17.5rem;
+  }
+  .details-tracker {
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 1024px;
+    text-align: left;
+    padding: 2rem;
+    font-size: 1.25em;
+    margin-top: -80px;
+  }
+
+  .details-tracker-feature:not(:last-child) {
+    flex-basis: 25%;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
 }
