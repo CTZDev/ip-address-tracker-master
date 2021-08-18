@@ -21,9 +21,8 @@ const getDataIP = async (ipValue) => {
     $ipIsp.textContent = isp;
     getMap(location.lat, location.lng);
   } catch (error) {
-    console.log(error);
     let message = error.statusText || "Ocurrio un error inesperado";
-    alert(`Error ${error.status} : ${message}`);
+    return error.status ? alert("Es probable que el error sea por ADBLOCK") : alert(`Error ${error.status} : ${message}`);
   }
 };
 
@@ -40,7 +39,7 @@ const getMap = (lat, lng) => {
   }).addTo(mymap);
 
   const greenIcon = L.icon({
-    iconUrl: "../../images/icon-location.svg",
+    iconUrl: "./images/icon-location.svg",
     iconSize: [45, 55],
   });
 
