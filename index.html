@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="app/css/style.css" />
+    <script defer src="./app/js/script.js"></script>
     <title>Frontend Mentor | IP Address Tracker</title>
   </head>
   <body>
@@ -16,8 +23,10 @@
             <input
               type="text"
               placeholder="Search for any IP address or domain"
+              pattern="^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+              name="txtIP"
+              title="Ingresa una IP valida"
               required
-              pattern="/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
             />
             <button type="submit">
               <img src="./images/icon-arrow.svg" alt="Icon Arrow Right" />
@@ -47,17 +56,13 @@
           </div>
         </div>
       </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3939.980539522342!2d-78.5878243!3d-9.0655369!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1629219630104!5m2!1ses-419!2spe"
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
-      <div id="map-location" class="none">
-        <img src="./images/icon-location.svg" alt="Icon Location" />
-      </div>
+      <div id="map" style="height: 70vh"></div>
     </main>
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
   </body>
 </html>
