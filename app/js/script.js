@@ -22,9 +22,10 @@ const getDataIP = async (ipValue) => {
     getMap(location.lat, location.lng);
   } catch (error) {
     let message = error.statusText || "Ocurrio un error inesperado";
-    return error.status
-      ? alert("Es probable que el error sea por ADBLOCK , Debe desactivarlo para una mejor experiencia")
-      : alert(`Error ${error.status} : ${message}`);
+    if (error.status === undefined) {
+      return alert("Es probable que el error sea por ADBLOCK , Debe desactivarlo para una mejor experiencia");
+    }
+    alert(`Error ${error.status} : ${message}`);
   }
 };
 
